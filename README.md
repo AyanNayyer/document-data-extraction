@@ -87,8 +87,8 @@ Medical document data extraction system using computer vision and AI
 
 ## Working
 
-- **Place input docs**: Put PDFs/images in AutoFlow/docs_in/
-- **Outputs location**: Results appear in AutoFlow/docs_out/ as:
+- **Place input docs**: Put PDFs/images in /docs_in/
+- **Outputs location**: Results appear in /docs_out/ as:
     - <name>.ocr.txt (raw OCR)
     - <name>.llm.txt (LLM raw response)
     - <name>.json (final structured data)
@@ -101,8 +101,8 @@ Medical document data extraction system using computer vision and AI
     - Python packages: pip install pillow numpy opencv-python easyocr pytesseract pdf2image pypdfium2 python-dotenv google-generativeai
     - System: Tesseract OCR, and poppler/pdfium as required by pdf2image
 - **Run**:
-    - python3 /Users/ayann/Documents/GitHub/autoflow-data-extraction/extraction_fixed.py
-    
+    - python3 extraction.py
+
 - **How it works** :
 
 Advanced preprocessing (8+ variants per page) → multi-engine OCR (Tesseract + EasyOCR, optional PaddleOCR) → combine text → Gemini LLM uses OCR + original images → emit structured medical JSON.
